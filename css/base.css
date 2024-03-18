@@ -320,8 +320,8 @@ button {
  * ------------------------------------------------------------------- */
 img,
 video {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -348,7 +348,7 @@ blockquote,
 th,
 td {
     margin: 0;
-    padding: 2px;
+    padding: 0;
 }
 
 h1,

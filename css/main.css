@@ -894,11 +894,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 
 /* =================================================================== 
- * Special
+ * # additional components
+ *
  * ------------------------------------------------------------------- */
-    
- 
-
 
 
 /* ------------------------------------------------------------------- 
@@ -1395,7 +1393,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 27px;
     height: 27px;
     margin: 0;
-    padding: 50px;
+    padding: 9px;
     cursor: pointer;
 }
 
@@ -1436,7 +1434,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 96px;
     background-color: transparent;
     position: absolute;
-    top: 0px;
+    top: 0;
     z-index: 500;
 }
 
@@ -2200,7 +2198,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: 16rem;
+    padding-top: 16.2rem;
     padding-bottom: 9rem;
     background-color: #39b54a;
     color: #010507;
@@ -2745,6 +2743,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .clients-outer {
     margin-top: 3.6rem;
+    padding-bottom: 0rem;
     text-align: center;
     position: relative;
 }
@@ -2825,11 +2824,11 @@ html.no-csstransitions .home-content__main {
     font-size: 1.4rem;
 }
 
-/* .clients-testimonials .testimonials .slick-arrow {
+.clients-testimonials .testimonials .slick-arrow {
     position: absolute;
     top: 7.2rem;
     width: 66px;
-    height: 360px;
+    height: 66px;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -2858,7 +2857,7 @@ html.no-csstransitions .home-content__main {
 
 .clients-testimonials .testimonials .slick-dots {
     margin-top: -0.6px;
-} */
+}
 
 
 /* ------------------------------------------------------------------- 
