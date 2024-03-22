@@ -28,6 +28,7 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -750,24 +751,24 @@
 
                 <h3 class="h6">Send Us A Message</h3>
 
-                <form onsubmit="sendEmail(event);" name="contactForm" id="contactForm" method="post" action=""
+                <form name="contactForm" id="submit-form" action=""
                     novalidate="novalidate">
                     <fieldset>
 
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
+                            <input name="contact Name" type="text" id="contact Name" placeholder="Your Name" value=""
                                 minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
+                            <input name="contact Email" type="email" id="contact Email" placeholder="Your Email" value=""
                                 required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
+                            <input name="contact Subject" type="text" id="contact Subject" placeholder="Subject" value=""
                                 class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
+                            <textarea name="contact Message" id="contact Message" placeholder="Your Message" rows="10"
                                 cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
@@ -990,48 +991,25 @@
     ================================================== -->
 
 
-    <Script>
-        function sendEmail(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Display loader
-            document.querySelector('.submit-loader').style.display = 'block';
-
-            // Submit the form using AJAX
-            var formData = new FormData(document.getElementById('contactForm'));
-
-            fetch('sendEmail.php', {
-                method: 'POST',
-                body: formData
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbz3g3SB-e9Hw_OjlXeaLK31t7JljICDR8jCsRluAD7ffQJNyiKpHQfUBUsQ1EqC9btiBg/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
             })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Hide loader
-                    document.querySelector('.submit-loader').style.display = 'none';
-
-                    // Handle response
-                    if (data.success) {
-                        // Email sent successfully
-                        alert('Email sent successfully');
-                    } else {
-                        // Failed to send email
-                        alert('Failed to send email');
-                    }
-                })
-                .catch(error => {
-                    // Hide loader
-                    document.querySelector('.submit-loader').style.display = 'none';
-                    console.error('Error:', error);
-                    alert('An error occurred while sending the email');
-                });
-        }
-
-    </Script>
+        })
+    </script>
 
 
     <!-- ================================================== -->
