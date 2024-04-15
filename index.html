@@ -47,39 +47,39 @@
             /* text-align: center; */
             margin: 50px;
         }
-    
+
         .section-heading {
             margin-bottom: 20px;
         }
-    
+
         .content-wrapper {
             display: block;
         }
-    
+
         .image-container,
         .content-container {
             display: block;
             margin: auto;
             max-width: 100%;
         }
-    
+
         .image-box {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             padding: 20px;
         }
-    
+
         .image-box img {
-            max-width: 100%;
+            max-width: 75%;
             height: auto;
             display: block;
-            margin: 0 auto;
+            margin: 5px 45px
         }
-    
+
         .content-container {
             padding-top: 20px;
         }
-    
+
         @media (min-width: 576px) {
             .section-container {
                 display: flex;
@@ -87,13 +87,13 @@
                 justify-content: center;
                 align-items: center;
             }
-    
+
             .image-container,
             .content-container {
                 flex: 1;
                 max-width: 50%;
             }
-    
+
             .content-container {
                 padding-top: 0;
             }
@@ -101,32 +101,34 @@
 
 
         .header-logo {
-        text-align: center; /* Center the logo */
-        margin-bottom: 20px; /* Add some spacing */
-    }
-
-    .site-logo img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-
-    /* Mobile */
-    @media (max-width: 576px) {
-        .site-logo img {
-            max-width: 40%; /* Adjust the size for mobile */
+            text-align: center;
+            /* Center the logo */
+            margin-bottom: 20px;
+            /* Add some spacing */
         }
-    }
 
-    /* Tablet/Desktop */
-    @media (min-width: 150px) {
         .site-logo img {
-            max-width: 10%; /* Adjust the size for tablet/desktop */
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
         }
-    }
 
-    
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .site-logo img {
+                max-width: 40%;
+                /* Adjust the size for mobile */
+            }
+        }
+
+        /* Tablet/Desktop */
+        @media (min-width: 150px) {
+            .site-logo img {
+                max-width: 10%;
+                /* Adjust the size for tablet/desktop */
+            }
+        }
     </style>
 
     <!-- favicons
@@ -144,7 +146,7 @@
             <a class="site-logo" href="index.html">
                 <img src="./images/Aptinnov 4 w.png" alt="Homepage" style="max-width: 250%; height: 100%;">
             </a>
-            
+
         </div>
 
         <nav class="header-nav">
@@ -158,8 +160,8 @@
                     <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll" href="#services" title="services">Features</a></li>
-                    <li><a class="smoothscroll" href="#works" title="works">Gallery</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
+                    <!-- <li><a class="smoothscroll" href="#works" title="works">Gallery</a></li> -->
+                    <!-- <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li> -->
                     <li><a class="smoothscroll" href="#contact" title="contact">Contact us</a></li>
                 </ul>
 
@@ -218,12 +220,12 @@
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="#works" class="smoothscroll btn btn--stroke">
+                    <!-- <a href="#works" class="smoothscroll btn btn--stroke">
                         Gallery
-                    </a>
-                    <!-- <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Us
                     </a> -->
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        About Us
+                    </a>
                 </div>
 
             </div>
@@ -260,7 +262,7 @@
                 <a href="https://youtube.com/@aptinnov1619?si=2aVDQ_t-hZgx9_cQ"><i class="fa fa-youtube"
                         aria-hidden="true"></i><span>YouTube</span></a>
             </li>
-            
+
         </ul>
         <!-- end home-social -->
 
@@ -357,19 +359,21 @@
 
 
 
-        <div class="section-container">
-            <div class="image-container">
-                <div class="image-box">
-                    <img src="./images/IMG_2736.jpeg" alt="Image">
-                </div>
-            </div>
-            <div class="content-container" style="margin:auto 20px">
-                <h2 class="section-heading" style="color: white; font-size: 25px;">Natural Rubber Collecting Knapsack</h2>
-                <p style="font-family: 'Caviar Dreams', sans-serif; font-size: 35px; font-weight: bold;">"Necessity is the mother of all Invention." <br>
-                <span style="font-size: 28px; font-weight: lighter;">Albert Einstein </span> </p>
-                <p style="font-size: 20px;">Patent No: 527110 <br>Date of Grant: 15 March 2024</p>
+    <div class="section-container">
+        <div class="image-container">
+            <div class="image-box">
+                <img src="./images/IMG_2736.jpeg" alt="Image">
             </div>
         </div>
+        <div class="content-container" style="margin:auto 20px">
+            <h2 class="section-heading" style="color: white; font-size: 25px;">Natural Rubber Collecting Knapsack</h2>
+            <p style="font-family: 'Caviar Dreams', sans-serif; font-size: 35px; font-weight: bold;">"Necessity is the
+                mother of all Invention." <br>
+                <span style="font-size: 28px; font-weight: lighter;">Albert Einstein </span>
+            </p>
+            <p style="font-size: 20px;">Patent No: 527110 <br>Date of Grant: 15 March 2024</p>
+        </div>
+    </div>
 
 
 
@@ -452,7 +456,7 @@
 
     <!-- works
     ================================================== -->
-    <section id='works' class="s-works">
+    <!-- <section id='works' class="s-works">
 
         <div class="intro-wrap">
 
@@ -460,13 +464,13 @@
                 <div class="col-full">
                     <h3 class="subhead">Product Gallery</h3>
                 </div>
-            </div>
-            <!-- end section-header -->
+            </div> -->
+    <!-- end section-header -->
 
-        </div>
-        <!-- end intro-wrap -->
+    <!-- </div> -->
+    <!-- end intro-wrap -->
 
-        <div class="row works-content">
+    <!-- <div class="row works-content">
             <div class="col-full masonry-wrap">
                 <div class="masonry">
 
@@ -501,9 +505,10 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div>  -->
+    <!-- end masonry__brick -->
 
-                    <div class="masonry__brick" data-aos="fade-up">
+    <!-- <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
@@ -534,9 +539,10 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div>  -->
+    <!-- end masonry__brick -->
 
-                    <div class="masonry__brick" data-aos="fade-up">
+    <!-- <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
@@ -567,9 +573,10 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div>  -->
+    <!-- end masonry__brick -->
 
-                    <div class="masonry__brick" data-aos="fade-up">
+    <!-- <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
@@ -600,9 +607,10 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div> -->
+    <!-- end masonry__brick -->
 
-                    <div class="masonry__brick" data-aos="fade-up">
+    <!-- <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
@@ -633,9 +641,10 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div>  -->
+    <!-- end masonry__brick -->
 
-                    <div class="masonry__brick" data-aos="fade-up">
+    <!-- <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
@@ -666,13 +675,17 @@
                             </div>
 
                         </div>
-                    </div> <!-- end masonry__brick -->
+                    </div>  -->
+    <!-- end masonry__brick -->
 
-                </div> <!-- end masonry -->
-            </div> <!-- end col-full -->
-        </div> <!-- end works-content -->
+    <!-- </div> -->
+    <!-- end masonry -->
+    <!-- </div> -->
+    <!-- end col-full -->
+    <!-- </div>  -->
+    <!-- end works-content -->
 
-    </section> <!-- end s-works -->
+    <!-- </section> end s-works -->
 
 
     <!-- clients
@@ -691,12 +704,18 @@
             <div class="col-full">
                 <div class="clients">
 
-                    <a href="https://gyti.techpedia.in/project-detail/latex-natural-rubber-carry-backpack/7194" target="_blank" title="" class="clients__slide"><img src="./images/DST.png" /></a>
-                    <a href="https://www.vcfsc.in/asiim/index.html" target="_blank" title="" class="clients__slide"><img src="./images/KIIB TBI.png" /></a>
-                    <a href="https://kiitincubator.in/nidhi-eir/" target="_blank" title="" class="clients__slide"><img src="./images/IFCI.png" /></a>
-                    <a href="https://drive.google.com/file/d/1N_IixaIwPbOIhQLVliIl21OSzTK8qa9u/view" target="_blank" title="" class="clients__slide"><img src="./images/KSUM.png" /></a>
-                    <a href="https://kau.in/news/16490" target="_blank" title="" class="clients__slide"><img src="./images/KAU.png" /></a>
-                    <a href="https://rkvy.nic.in" target="_blank" title="" class="clients__slide"><img src="./images/RKVY.png" /></a>
+                    <a href="https://gyti.techpedia.in/project-detail/latex-natural-rubber-carry-backpack/7194"
+                        target="_blank" title="" class="clients__slide"><img src="./images/DST.png" /></a>
+                    <a href="https://www.vcfsc.in/asiim/index.html" target="_blank" title="" class="clients__slide"><img
+                            src="./images/KIIB TBI.png" /></a>
+                    <a href="https://kiitincubator.in/nidhi-eir/" target="_blank" title="" class="clients__slide"><img
+                            src="./images/IFCI.png" /></a>
+                    <a href="https://drive.google.com/file/d/1N_IixaIwPbOIhQLVliIl21OSzTK8qa9u/view" target="_blank"
+                        title="" class="clients__slide"><img src="./images/KSUM.png" /></a>
+                    <a href="https://kau.in/news/16490" target="_blank" title="" class="clients__slide"><img
+                            src="./images/KAU.png" /></a>
+                    <a href="https://rkvy.nic.in" target="_blank" title="" class="clients__slide"><img
+                            src="./images/RKVY.png" /></a>
 
                 </div> <!-- end clients -->
             </div> <!-- end col-full -->
@@ -750,8 +769,7 @@
 
                 <h3 class="h6">Send Us A Message</h3>
 
-                <form name="contactForm" id="submit-form" action=""
-                    novalidate="novalidate">
+                <form name="contactForm" id="submit-form" action="" novalidate="novalidate">
                     <fieldset>
 
                         <div class="form-field">
@@ -759,12 +777,12 @@
                                 minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contact Email" type="email" id="contact Email" placeholder="Your Email" value=""
-                                required="" aria-required="true" class="full-width">
+                            <input name="contact Email" type="email" id="contact Email" placeholder="Your Email"
+                                value="" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contact Subject" type="text" id="contact Subject" placeholder="Subject" value=""
-                                class="full-width">
+                            <input name="contact Subject" type="text" id="contact Subject" placeholder="Subject"
+                                value="" class="full-width">
                         </div>
                         <div class="form-field">
                             <textarea name="contact Message" id="contact Message" placeholder="Your Message" rows="10"
@@ -852,7 +870,7 @@
                             <a href="https://youtube.com/@aptinnov1619?si=2aVDQ_t-hZgx9_cQ"><i class="fa fa-youtube"
                                     aria-hidden="true"></i></a>
                         </li>
-                        
+
                     </ul> <!-- end contact-social -->
 
                 </div> <!-- end contact-info -->
@@ -874,13 +892,16 @@
                 <!-- <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1> -->
             </div>
         </div>
-
+        <br>
+        <br>
         <div style="overflow:auto; padding-top:50%; position:relative;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.779859914258!2d76.82032367491551!3d9.52784589055476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0637c2e4cb6439%3A0xd7716af546178aef!2sStartups%20Valley%20TBI!5e0!3m2!1sen!2sin!4v1710314335856!5m2!1sen!2sin" 
-                width="100%" height="100%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.779859914258!2d76.82032367491551!3d9.52784589055476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0637c2e4cb6439%3A0xd7716af546178aef!2sStartups%20Valley%20TBI!5e0!3m2!1sen!2sin!4v1710314335856!5m2!1sen!2sin"
+                width="100%" height="80%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        
+
 
         <!-- <div class="col-six tab-full left footer-desc">
 
@@ -991,20 +1012,20 @@
 
 
     <script>
-        $("#submit-form").submit((e)=>{
+        $("#submit-form").submit((e) => {
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbz3g3SB-e9Hw_OjlXeaLK31t7JljICDR8jCsRluAD7ffQJNyiKpHQfUBUsQ1EqC9btiBg/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
+                url: "https://script.google.com/macros/s/AKfycbzEk_K5Iwc_i_ySLV9nJn5Zj9bQSa54dWDtikEh_nBKvIFaRDWl1NhBGq38dAhUl3Tl/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
                     alert("Form submitted successfully")
                     window.location.reload()
                     //window.location.href="https://google.com"
                 },
-                error:function (err){
+                error: function (err) {
                     alert("Something Error")
-    
+
                 }
             })
         })
