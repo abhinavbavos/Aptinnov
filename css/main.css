@@ -6939,8 +6939,16 @@ html.no-csstransitions .home-content__main {
 
 /* ===================================================================
  * # footer
- *
  * ------------------------------------------------------------------- */
+ body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
     padding: 9rem 0 6rem;
     font-family: "montserrat-light", sans-serif;
@@ -6948,6 +6956,8 @@ footer {
     line-height: 2;
     text-align: center;
     color: rgba(255, 255, 255, 0.3);
+    background: #000; /* Ensure a background color for contrast */
+    margin-top: auto; /* Push footer to bottom */
 }
 
 footer h4 {
@@ -6968,12 +6978,15 @@ footer a:hover, footer a:focus, footer a:active {
 
 footer .row {
     max-width: 980px;
+    margin: 0 auto; /* Center align the content */
 }
 
+.map-container {
+    position: relative;
+    height: 400px; /* Set a fixed height for the map */
+    margin-bottom: 50px; /* Space between the map and footer */
+}
 
-/* --------------------------------------------------------------- 
- * ## footer main
- * --------------------------------------------------------------- */
 .footer-main {
     text-align: left;
 }
@@ -7034,12 +7047,10 @@ footer .row {
 
 .footer-subscribe #mc-form input[type="email"]:-moz-placeholder {
     color: rgba(255, 255, 255, 0.2);
-    /* Firefox 18- */
 }
 
 .footer-subscribe #mc-form input[type="email"]::-moz-placeholder {
     color: rgba(255, 255, 255, 0.2);
-    /* Firefox 19+ */
 }
 
 .footer-subscribe #mc-form input[type="email"]:-ms-input-placeholder {
@@ -7071,7 +7082,6 @@ footer .row {
     padding-right: 6px;
 }
 
-
 /* ---------------------------------------------------------------
  * ## footer bottom
  * --------------------------------------------------------------- */
@@ -7095,6 +7105,7 @@ footer .row {
 .footer-bottom .copyright span:last-child::after {
     display: none;
 }
+
 
 
 /* ------------------------------------------------------------------- 

@@ -10,11 +10,26 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .hero {
     text-align: center;
     padding: 20px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero:hover {
+    transform: scale(1.05);
 }
 
 .product-image {
@@ -22,12 +37,24 @@ body {
     max-width: 300px;
     margin: 0 auto;
     display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
 }
 
 .product-name {
     font-size: 2.5em;
     color: #00ff00;
     margin: 10px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.product-name:hover {
+    color: #00cc00;
 }
 
 .tagline {
@@ -44,6 +71,11 @@ body {
     color: #00ff00;
     border-bottom: 2px solid #00ff00;
     padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.product-details h2:hover {
+    color: #00cc00;
 }
 
 .description, .specifications {
@@ -56,9 +88,13 @@ body {
 }
 
 .specifications li {
-    background: url('checkmark.png') no-repeat left center;
-    padding-left: 20px;
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+.specifications li img {
+    margin-right: 10px;
 }
 
 .cta {
@@ -70,6 +106,7 @@ body {
     font-size: 2em;
     color: #00ff00;
     margin-right: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
 .buy-now-btn {
@@ -79,11 +116,34 @@ body {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
 
 .buy-now-btn:hover {
     background-color: #00cc00;
+    transform: scale(1.05);
+}
+
+.back-home-btn {
+    font-size: 1.2em;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.back-home-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.trust-badges {
+    margin-top: 20px;
+}
+
+.trust-badges img {
+    margin: 0 10px;
 }
 
 .contact-info {
@@ -94,8 +154,10 @@ body {
 .contact-info a {
     color: #00ff00;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
+    color: #00cc00;
     text-decoration: underline;
 }
